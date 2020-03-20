@@ -31,8 +31,10 @@
 		</ul>
 	</nav>
 	
+
+
 	<article class="bgParallax" data-speed="20">
-		<h1><img src="assets/images/logo2.png" alt="MSDesign.pt"></h1>
+		<img src="assets/images/logo2.png" alt="MSDesign.pt">
 
 		<img src="assets/images/listaSites2.png" alt="">	   
 	</article>
@@ -53,15 +55,31 @@
 
 	<article id="contato" class="bgParallax" data-speed="20">
 		<h1>Contato</h1>
-		<div class=flex-row>
-			<div>
-				<p><i class="fa fa-phone" aria-hidden="true"></i> Tlm: +351 934 290 403</p>
-				<p><i class="fa fa-envelope" aria-hidden="true"></i> E-mail: contato@msdesign.pt</p>
-				<p><i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook: fb/mariosilvadesign</p>
-				<p><a href="https://api.whatsapp.com/send?phone=351934290403&text=kk" target="_blank" title="Fale diretamente conosco"><i class="whatsapp fab fa-whatsapp"></i> Whatsapp</a></p>
+		<div class="contact-wrap row">
+			<div class="col-md-4 contact-data">
+				<p><i class="fa fa-phone" aria-hidden="true"></i> <strong>Tlm:</strong> +351 934 290 403</p>
+				<p><i class="fa fa-envelope" aria-hidden="true"></i> <strong>E-mail:</strong> contato@msdesign.pt</p>
+				<p><i class="fab fa-facebook-square" aria-hidden="true"></i> <strong>Facebook:</strong> fb/mariosilvadesign</p>
+				<p><a href="https://api.whatsapp.com/send?phone=351934290403&text=kk" target="_blank" title="Fale diretamente conosco"><i class="whatsapp fab fa-whatsapp"></i> <strong>Whatsapp</strong></a></p>
 			</div>
-			<div>
-				Form contato
+			<div class="col-md-8 contact-form">
+				<form>
+					<div class="form-group col-md-12">
+						<input class="form-control" name="nome" type="text" id="nome" size="40" placeholder="Nome" />
+					</div>
+					<div class="form-group col-md-12">
+						<input class="form-control" name="email" type="text" id="email" size="40" placeholder="E-mail" />
+					</div>
+					<div class="form-group col-md-12">
+						<input class="form-control" name="fone" type="text" id="fone" size="40" placeholder="Fone/Cel" />
+					</div>
+					<div class="form-group col-md-12">
+						<textarea class="form-control" name="msg" cols="35" rows="4" id="textarea" placeholder="Sua mensagem"></textarea>
+					</div>
+					<div class="col-md-12">
+						<button class="form-control btn btn-default" type="submit" name="Submit" />Enviar</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</article>
@@ -69,13 +87,14 @@
 	<div class="politics">Politica de privacidade Política de Cookies</div>
 
 	<footer class="copy-rights">
-		<p>MSDesign.pt © 2020 All Rights Reserved </p>
-		<p class="made">Made with <i class="fa fa-heart" aria-hidden="true"></i> by<a href="https://www.facebook.com/mariosilvadesign/" target="_blank"> MSDesign</a></p>
+		<span>MSDesign.pt © 2020 All Rights Reserved </span>
+		<span class="made">Made with <i class="fa fa-heart" aria-hidden="true"></i> by<a href="https://www.facebook.com/mariosilvadesign/" target="_blank"> MSDesign</a></span>
 	</footer>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="assets/js/social-share/javascripts/socialProfiles.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
 
 	<script src="assets/js/paralax.js"></script>
 	<script src="assets/js/socialShare.js"></script>
