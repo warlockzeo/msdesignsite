@@ -1,0 +1,187 @@
+/* reset */
+* {
+    box-sizing: border-box;
+}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,blockquote,pre,a,p,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+img {max-width: 100%;}
+/*end reset*/
+
+body, html {
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;    
+    text-align: center;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* IE10-specific styles go here*/
+    body, html {
+        width: 100%;
+        display: table;
+        padding-top: 30px;
+    }
+  }
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.flex-row {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ccc;
+}
+
+.copy-rights, .politics {
+    width: 100%;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    color: #fff;
+    background-color: #000000;
+    border-top: solid 1px #ffffff;
+    padding: 10px;
+}
+.copy-rights {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.made {
+    padding-right: 100px;
+}
+
+.politics {
+    text-align: left;
+}
+
+.made a {
+    color: #ffffff;
+}
+
+.bloco {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.svg-inline--fa.fa-w-16 {
+    width: 20px !important;
+    height: 20px !important;
+    color: #ff0000;
+}
+
+.social-media {
+    padding: 15px 20px;
+    color: #fff;
+    text-shadow: 0 3px 5px rgba(0,0,0,.6);
+    box-shadow: 0 2px 5px #000;
+    font-size: 18px;
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    background: rgb(170,41,41);
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(170,41,41,1)), color-stop(100%,rgba(134,4,4,1)));
+    background: -moz-linear-gradient(top, rgba(170,41,41,1) 0%, rgba(134,4,4,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(170,41,41,1) 0%,rgba(134,4,4,1) 100%);
+    background: -o-linear-gradient(top, rgba(170,41,41,1) 0%,rgba(134,4,4,1) 100%);
+    background: -ms-linear-gradient(top, rgba(170,41,41,1) 0%,rgba(134,4,4,1) 100%);
+    background: linear-gradient(to bottom, rgba(170,41,41,1) 0%,rgba(134,4,4,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa2929', endColorstr='#860404',GradientType=0 );
+}
+
+
+
+.bgParallax {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article:nth-of-type(odd) {
+    background-image: url(../images/bg3.jpg);
+    box-shadow:0px 0 10px 5px rgba(0,0,0,0.7);
+}
+
+article:nth-of-type(even) {
+    position: relative;
+    background-image: url(../images/bg.jpg);
+    z-index: -1;
+}
+
+
+
+
+
+nav {
+    position: absolute;
+    top: 0; 
+    z-index: 900;
+    width: 100%;
+    height: 65px; 
+    padding-right: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: rgba(0,0,0,0.7);
+    border-bottom: solid 2px #000000;
+    transition:All 0.5s ease; 
+}
+ 
+nav img {
+    height: 100%;
+}
+
+li {
+    display: block;
+    float: left;
+}
+
+.retratil {
+    position: fixed; 
+    top: -65px;
+    height: 40px; 
+    border: none;
+    background-color: transparent;
+    background-image: linear-gradient(#000000, rgba(0,0,0,0));
+}
+
+nav a {
+    line-height: 65px; 
+    color: #ffffff;
+    padding: 0 10px; 
+    text-decoration: none;
+}
+
+nav.retratil a {
+    text-shadow: 0 0 5px #000000;
+}
+
+nav a:hover {
+    color: #0000ff;
+}
