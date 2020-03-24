@@ -2,3 +2,6 @@ node_modules
 mariolpsilva
 deploy.sh
 gulpfile.js
+.eslintrc
+.prettierrc
+.gitignore
