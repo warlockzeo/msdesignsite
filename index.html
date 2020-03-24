@@ -15,45 +15,72 @@
 </head>
 <body>
 	<nav>
-		<div>whatsapp</div>
-		<ul>
-			<li><a href="servicos">Serviços</a></li>
-			<li><a href="portfolio">Portfólio</a></li>
-			<li><a href="contato">Contato</a></li>
-		</ul>
-	</nav>
-	<nav class="retratil">
-		<img src="assets/images/logo2.png" alt="MSDesign.pt">
-		<ul>
-			<li><a href="servicos">Serviços</a></li>
-			<li><a href="portfolio">Portfólio</a></li>
-			<li><a href="contato">Contato</a></li>
-		</ul>
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<i class="fas fa-bars"></i>
+		</button>
+		<div class="nav navbar-collapse">
+			<ul>
+				<li><a href="home">Início</a></li>
+				<li><a href="services">Serviços</a></li>
+				<li><a href="portfolio">Portfólio</a></li>
+				<li><a href="contact">Contato</a></li>
+				<li><a href="politics">Politicas de privacidade</a></li>
+			</ul>
+		</div>
+		<div class="nav retratil">
+			<img src="assets/images/logo2.png" alt="MSDesign.pt">
+			<ul>
+				<li><a href="home">Início</a></li>
+				<li><a href="services">Serviços</a></li>
+				<li><a href="portfolio">Portfólio</a></li>
+				<li><a href="contact">Contato</a></li>
+				<li><a href="politics">Politicas de privacidade</a></li>
+			</ul>
+		</div>
 	</nav>
 	
 
 
-	<article class="bgParallax" data-speed="20">
+	<section id="home" class="bgParallax" data-speed="20">
 		<img src="assets/images/logo2.png" alt="MSDesign.pt">
 
 		<img src="assets/images/listaSites2.png" alt="">	   
-	</article>
+	</section>
 
-	<article id="servicos" class="bgParallax" data-speed="20">
+	<section id="services" class="bgParallax" data-speed="20">
 		<h1>Serviços</h1>
 		<div class="bloco">
-			Websites, Redes Sociais, Identidade Visual.
+			<div class="subbloco">
+				<h2>Websites</h2>
+				<p>Damos todo suporte e apoio na criação de modelos de sucesso para a web. O website é o cartão de visitas online da sua empresa.</p>
+			</div>
+			<div class="subbloco">
+				<h2>Redes Sociais</h2>
+				<p>Nas Redes Socias você leva as pessoas a conhecerem e se relacionarem com a sua empresa/marca.  Nós ajudamos na gestão destes conteúdos.</p>
+			</div>
+			<div class="subbloco">
+				<h2>Identidade Visual</h2>
+				<p>Qual a imagem que sua empresa/produto possui e como esta imagem impacta nas suas vendas? Vamos criar uma identidade homogênea que fará com que seja amor à primeira vista.</p>
+			</div>
 		</div>
-	</article>
+	</section>
 
-	<article id="portfolio" class="bgParallax" data-speed="20">
+	<section id="portfolio" class="bgParallax" data-speed="20">
 		<h1>Portfólio</h1>
-		<div class="bloco">
-			Websites, Redes Sociais, Identidade Visual.
-		</div>
-	</article>
+		<div class="bloco col-md-12 projects row">
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="project" style="background-image: url('/mariolpsilva/Dalmon Boy.jpg');">
+					<img src="/mariolpsilva/Dalmon Boy.jpg" alt="" class="project-image">
+					<div class="project-description">
+						texto
+					</div>
+				</div>
+			</div>
 
-	<article id="contato" class="bgParallax" data-speed="20">
+		</div>
+	</section>
+
+	<section id="contact" class="bgParallax contact" data-speed="20">
 		<h1>Contato</h1>
 		<div class="contact-wrap row">
 			<div class="col-md-4 contact-data">
@@ -77,14 +104,14 @@
 						<textarea class="form-control" name="msg" cols="35" rows="4" id="textarea" placeholder="Sua mensagem"></textarea>
 					</div>
 					<div class="col-md-12">
-						<button class="form-control btn btn-default" type="submit" name="Submit" />Enviar</button>
+						<button class="form-control btn btn-primary" type="submit" name="Submit" />Enviar</button>
 					</div>
 				</form>
 			</div>
 		</div>
-	</article>
+	</section>
 
-	<div class="politics">Politica de privacidade Política de Cookies</div>
+	<div id="politics" class="politics">Politica de privacidade Política de Cookies</div>
 
 	<footer class="copy-rights">
 		<span>MSDesign.pt © 2020 All Rights Reserved </span>
