@@ -76,14 +76,85 @@
 		<h1>Portfólio</h1>
 		<div class="bloco col-md-12 projects row">
 			<div class="col-lg-4 col-md-6 col-sm-12">
-				<div class="project" style="background-image: url('/mariolpsilva/Dalmon Boy.jpg');">
-					<img src="/mariolpsilva/Dalmon Boy.jpg" alt="" class="project-image">
+				<div class="project" style="background-image: url('/assets/images/projectBraveBoy.jpg');">
+					<img src="/assets/images/projectBraveBoy.jpg" alt="Brave Boy" class="project-image">
+					<div class="project-description">
+						Brave Boy
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="project" style="background-image: url('/assets/images/projectDalmonBoy.jpg');">
+					<img src="/assets/images/projectDalmonBoy.jpg" alt="" class="project-image">
 					<div class="project-description">
 						texto
 					</div>
 				</div>
 			</div>
 
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="project" style="background-image: url('/assets/images/projectEllenJeans.jpg');">
+					<img src="/assets/images/projectEllenJeans.jpg" alt="" class="project-image">
+					<div class="project-description">
+						texto
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="project" style="background-image: url('/assets/images/projectKilometromil.jpg');">
+					<img src="/assets/images/projectKilometromil.jpg" alt="" class="project-image">
+					<div class="project-description">
+						texto
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="project" style="background-image: url('/assets/images/projectMalhariaGomes.jpg');">
+					<img src="/assets/images/projectMalhariaGomes.jpg" alt="" class="project-image">
+					<div class="project-description">
+						texto
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="project" style="background-image: url('/assets/images/projectMetaMania.jpg');">
+					<img src="/assets/images/projectMetaMania.jpg" alt="" class="project-image">
+					<div class="project-description">
+						texto
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="project" style="background-image: url('/assets/images/projectPrimagama.jpg');">
+					<img src="/assets/images/projectPrimagama.jpg" alt="" class="project-image">
+					<div class="project-description">
+						texto
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="project" style="background-image: url('/assets/images/projectSobralcar.jpg');">
+					<img src="/assets/images/projectSobralcar.jpg" alt="" class="project-image">
+					<div class="project-description">
+						texto
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="project" style="background-image: url('/assets/images/project.jpg');">
+					<img src="/assets/images/project.jpg" alt="" class="project-image">
+					<div class="project-description">
+						texto
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -166,20 +237,24 @@
 		$("form").submit(function (event) {
 			event.preventDefault();
 			const dados = $(this).serializeArray();
+			let enviar = 1;
 
 			$(dados).each(function () {
 				if (this.value.length < 1) {
 					$(".alert-danger").text("Formulário vazio, todos os campos são obrigatórios!").show().fadeOut(6000);
-				} else {
-					sendForm(dados);
-				};
+					enviar = 0;
+				}
 			});
+
+			if (enviar > 0) {
+				sendForm(dados);
+			}
 		});
 
 		const sendForm = (data) => {
 			$(".loading").show();
 			$.ajax({
-				url: "envia_email.php",
+				url: "sendEmail",
 				type: "POST",
 				data: JSON.stringify(data),
 				success: function (data) {
