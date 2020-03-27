@@ -10,8 +10,8 @@
 	# Mensagem de erro personalizada.
 	ErrorDocument 403 "Desculpe! Acesso nao permitido
 	
-	RewriteCond %{http_host} ^dalmonboy.pt [nc]
-	RewriteRule ^(.*)$ https://www.dalmonboy.pt/$1 [r=301,nc]
+	RewriteCond %{http_host} ^msdesign.pt [nc]
+	RewriteRule ^(.*)$ https://www.msdesign.pt/$1 [r=301,nc]
 
 #Users
 	RewriteRule ^sendEmail/?$ sendEmail.php [NC]

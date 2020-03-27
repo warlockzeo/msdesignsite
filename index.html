@@ -79,7 +79,8 @@
 				<div class="project" style="background-image: url('/assets/images/projectBraveBoy.jpg');">
 					<img src="/assets/images/projectBraveBoy.jpg" alt="Brave Boy" class="project-image">
 					<div class="project-description">
-						Brave Boy
+						Brave Boy<br />
+						Website e identidade visual.
 					</div>
 				</div>
 			</div>
@@ -88,7 +89,8 @@
 				<div class="project" style="background-image: url('/assets/images/projectDalmonBoy.jpg');">
 					<img src="/assets/images/projectDalmonBoy.jpg" alt="" class="project-image">
 					<div class="project-description">
-						texto
+						Dalmon Boy<br />
+						Website e Mídias Sociais.
 					</div>
 				</div>
 			</div>
@@ -97,7 +99,8 @@
 				<div class="project" style="background-image: url('/assets/images/projectEllenJeans.jpg');">
 					<img src="/assets/images/projectEllenJeans.jpg" alt="" class="project-image">
 					<div class="project-description">
-						texto
+						Ellen Jeans<br />
+						Website.
 					</div>
 				</div>
 			</div>
@@ -106,7 +109,8 @@
 				<div class="project" style="background-image: url('/assets/images/projectKilometromil.jpg');">
 					<img src="/assets/images/projectKilometromil.jpg" alt="" class="project-image">
 					<div class="project-description">
-						texto
+						Kilometromil<br />
+						Website.
 					</div>
 				</div>
 			</div>
@@ -115,7 +119,8 @@
 				<div class="project" style="background-image: url('/assets/images/projectMalhariaGomes.jpg');">
 					<img src="/assets/images/projectMalhariaGomes.jpg" alt="" class="project-image">
 					<div class="project-description">
-						texto
+						Malharia Gomes<br />
+						Website e identidade visual.
 					</div>
 				</div>
 			</div>
@@ -124,7 +129,8 @@
 				<div class="project" style="background-image: url('/assets/images/projectMetaMania.jpg');">
 					<img src="/assets/images/projectMetaMania.jpg" alt="" class="project-image">
 					<div class="project-description">
-						texto
+						Meta Mania<br />
+						Website e identidade visual.
 					</div>
 				</div>
 			</div>
@@ -133,7 +139,8 @@
 				<div class="project" style="background-image: url('/assets/images/projectPrimagama.jpg');">
 					<img src="/assets/images/projectPrimagama.jpg" alt="" class="project-image">
 					<div class="project-description">
-						texto
+						Prima Gama<br />
+						Webdesign.
 					</div>
 				</div>
 			</div>
@@ -142,19 +149,12 @@
 				<div class="project" style="background-image: url('/assets/images/projectSobralcar.jpg');">
 					<img src="/assets/images/projectSobralcar.jpg" alt="" class="project-image">
 					<div class="project-description">
-						texto
+						Sobralcar<br />
+						Website.
 					</div>
 				</div>
 			</div>
 
-			<div class="col-lg-4 col-md-6 col-sm-12">
-				<div class="project" style="background-image: url('/assets/images/project.jpg');">
-					<img src="/assets/images/project.jpg" alt="" class="project-image">
-					<div class="project-description">
-						texto
-					</div>
-				</div>
-			</div>
 		</div>
 	</section>
 
@@ -201,8 +201,6 @@
 		</div>
 	</section>
 
-	<div id="politics" class="politics">Politica de privacidade Política de Cookies</div>
-
 	<footer class="copy-rights">
 		<span>MSDesign.pt © 2020 All Rights Reserved </span>
 		<span class="made">Made with <i class="fa fa-heart" aria-hidden="true"></i> by<a
@@ -211,18 +209,24 @@
 
 	<div class="cookies-bar">
 		<div>
-			<p>Utilizamos cookies para melhorar experiência do utilizador, personalizar conteúdo e anúncios, fornecer
-				funcionalidades de redes sociais e analisar o tráfego nos websites.</p>
-			<p>Partilhamos informações com os nossos parceiros de redes sociais, de publicidade e de análise, que as
+			<p>
+				Utilizamos cookies para melhorar experiência do utilizador, personalizar conteúdo e anúncios, fornecer
+				funcionalidades de redes sociais e analisar o tráfego nos websites.
+			</p>
+			<p>
+				Partilhamos informações com os nossos parceiros de redes sociais, de publicidade e de análise, que as
 				podem combinar com outras informações que lhes forneceu ou recolhidas por estes a partir da utilização
 				daqueles serviços. Consente? Mais informações sobre cookies e o processamento dos seus dados pessoais,
-				consulte a nossa Política de Cookies e Política de Privacidade.</p>
+				consulte a nossa <a href="/cookiespolitics">Política de Cookies</a> e <a href="/policepolitics">Política
+					de Privacidade</a>.
+			</p>
 		</div>
 		<button class="btn btn-success">Aceito</button>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="assets/js/social-share/javascripts/socialProfiles.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
 
@@ -236,15 +240,23 @@
 		$(".alert").hide();
 		$("form").submit(function (event) {
 			event.preventDefault();
-			const dados = $(this).serializeArray();
+			const dadosForm = $(this).serializeArray();
+			//let dados = '';
 			let enviar = 1;
 
-			$(dados).each(function () {
+			$(dadosForm).each(function () {
 				if (this.value.length < 1) {
 					$(".alert-danger").text("Formulário vazio, todos os campos são obrigatórios!").show().fadeOut(6000);
 					enviar = 0;
 				}
 			});
+
+			const dados = {
+				nome: dadosForm[0].value,
+				email: dadosForm[1].value,
+				fone: dadosForm[2].value,
+				mensagem: dadosForm[3].value,
+			};
 
 			if (enviar > 0) {
 				sendForm(dados);

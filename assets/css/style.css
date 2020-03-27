@@ -80,8 +80,7 @@ button {
   align-items: center;
 }
 
-.copy-rights,
-.politics {
+.copy-rights {
   width: 100%;
   line-height: 1.7em;
   color: #fff;
@@ -102,10 +101,6 @@ button {
 
 .made {
   padding-right: 100px;
-}
-
-.politics {
-  text-align: left;
 }
 
 .made a {
@@ -206,8 +201,7 @@ button {
 }
 
 @media only screen and (max-width: 767px) {
-  .copy-rights,
-  .politics {
+  .copy-rights {
     flex-direction: column;
     text-align: left;
   }
